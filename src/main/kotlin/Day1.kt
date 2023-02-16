@@ -42,11 +42,11 @@ fun main() {
         println("\n===============================================")
         val accessor = Accessor()
 
-        println("Nhập tên")
+        print("Nhập tên: ")
         var input: String = readln()
         if (input.isEmpty()) accessor.name = "null"
         else accessor.name = input
-        println("Nhập tuổi (bằng số)")
+        print("Nhập tuổi (bằng số): ")
         input = readln()
         if (input.isEmpty()) accessor.age = 0
         else accessor.age = try {
