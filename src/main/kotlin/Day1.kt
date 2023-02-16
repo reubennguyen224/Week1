@@ -30,7 +30,7 @@ class Foo{
 
 }
 fun header(){
-    println("===============================================")
+    println("\n===============================================")
     println("Nhập số tương ứng để chạy chương trình")
     println("0. Dừng chương trình")
     println("1. Khởi tạo lazy")
@@ -39,7 +39,7 @@ fun header(){
 } //function top-level using print header only
 fun main() {
     fun customAccessor(){
-        println("===============================================")
+        println("\n===============================================")
         val accessor = Accessor()
 
         println("Nhập tên")
@@ -60,7 +60,7 @@ fun main() {
     }
 
     fun lazyInit(){
-        println("===============================================")
+        println("\n===============================================")
         val y: Int by lazy{
             println("Running lambda")
             10
@@ -71,7 +71,7 @@ fun main() {
         }
     }
     fun lateInit(){
-        println("===============================================")
+        println("\n===============================================")
         val foo = Foo()
         foo.init()
         foo.init()
