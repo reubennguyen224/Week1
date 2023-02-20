@@ -50,7 +50,7 @@ val lowSalary = {
     println("Low Salary")
 }
 
-fun Employee.highOrLowSalary(): () -> Unit  {
+fun Employee.highOrLowSalary(): () -> Unit {
     return if (salary > 1000) highSalary else lowSalary
 }
 
@@ -100,7 +100,7 @@ fun main() {
                 }
             }
 
-            5->{
+            5 -> {
                 println("Enter employee index:")
                 val index = sc.nextInt()
                 employees[index].highOrLowSalary()
