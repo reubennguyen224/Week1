@@ -54,10 +54,12 @@ fun Employee.highOrLowSalary(): () -> Unit {
     return if (salary > 1000) highSalary else lowSalary
 }
 
-fun guess(employee: Employee, new: () -> Int): String {
-    val newSalary = new()
-    return if (employee.salary < newSalary) "increased"
+fun guess(employee: Employee, newSalary: Int, new: (String) -> Unit) {
+    val a = if (employee.salary < newSalary) "increased"
     else "decreased"
+
+  //  call api
+    new(a)
 }
 
 fun main() {
@@ -93,9 +95,10 @@ fun main() {
                 with(employees[index]) {
                     print()
                     if (this.job != null) {
-                        println(guess(employee = this) {
-                            (MM * level) - ((MM * late) / 4)
-                        })
+
+                        guess(employee = this,  (MM * level) - ((MM * late) / 4)) {
+
+                        }
                     }
                 }
             }
